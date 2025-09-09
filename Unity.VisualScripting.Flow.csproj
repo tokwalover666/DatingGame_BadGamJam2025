@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0FE5BABA-E592-E01E-F3D2-D794F0142A94}</ProjectGuid>
+    <ProjectGuid>{C2C9DFDC-9701-49C4-A266-95DB8B3576ED}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.VisualScripting.Flow</AssemblyName>
@@ -269,8 +269,8 @@
     <Compile Include="Library\PackageCache\com.unity.visualscripting@7dcdc439b230\Runtime\VisualScripting.Flow\Framework\Logic\NumericComparison.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@7dcdc439b230\Runtime\VisualScripting.Flow\EditorBinding\PortLabelAttribute.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@7dcdc439b230\Runtime\VisualScripting.Flow\Framework\Control\ToggleFlow.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@7dcdc439b230\Runtime\VisualScripting.Flow\Framework\Math\DotProduct.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@7dcdc439b230\Runtime\VisualScripting.Flow\Framework\Variables\Obsolete\GetGraphVariable.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@7dcdc439b230\Runtime\VisualScripting.Flow\Framework\Math\DotProduct.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@7dcdc439b230\Runtime\VisualScripting.Flow\Framework\Events\Physics2D\OnCollisionExit2D.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@7dcdc439b230\Runtime\VisualScripting.Flow\Framework\Math\Vector2\Vector2Distance.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@7dcdc439b230\Runtime\VisualScripting.Flow\Framework\Math\Scalar\ScalarSum.cs" />
@@ -1480,19 +1480,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.VisualScripting.Core.csproj">
-      <Project>{4DAD3C5F-71AE-26F7-9110-491F0AD2FC5E}</Project>
+      <Project>{276993F3-363C-309F-42DC-DEA7345C4DC2}</Project>
       <Name>Unity.VisualScripting.Core</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InputSystem.csproj">
-      <Project>{12039AAD-176F-FF61-95F8-C173F7EB6DC8}</Project>
+      <Project>{518D6266-543C-FA59-97EF-A6E1D56F9B6B}</Project>
       <Name>Unity.InputSystem</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{D6C8A274-342D-7ABF-9580-404B8C0EAB7B}</Project>
+      <Project>{1916FFA6-AE01-0AC4-F799-D3027A253398}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{A387F022-6846-F525-690C-FCC743B0AAD8}</Project>
+      <Project>{35F33B75-1C56-45DD-E3C6-DC30277D472A}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>

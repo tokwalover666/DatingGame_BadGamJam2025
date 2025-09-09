@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class SwipeCard : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class SwipeCard : MonoBehaviour
     bool dragging;
 
     public bool HasFlownOff { get; private set; }
+
+    public Action<SwipeCard> OnDestroyed;
 
     void Start()
     {
@@ -49,13 +52,12 @@ public class SwipeCard : MonoBehaviour
 
             dragDelta = new Vector3(moveX, 0f, 0f);
 
-            if (Mathf.Abs(moveX) < 0.05f) 
+            if (Mathf.Abs(moveX) < 0.05f)
             {
                 transform.position = Vector3.Lerp(transform.position, startPos, Time.deltaTime * returnSpeed);
                 transform.rotation = Quaternion.Slerp(transform.rotation, startRot, Time.deltaTime * returnSpeed);
             }
         }
-
 
         if (Input.GetMouseButtonUp(0) && dragging)
         {
@@ -101,13 +103,15 @@ public class SwipeCard : MonoBehaviour
         Quaternion toRot = Quaternion.Euler(0f, 0f, dir.x > 0f ? maxTiltDegrees : -maxTiltDegrees);
 
         float t = 0f;
-        while (t < 1f)
+        while (t < 0.6f)
         {
             t += Time.deltaTime / Mathf.Max(flyOutDuration, 0.0001f);
             transform.position = Vector3.Lerp(fromPos, toPos, t);
             transform.rotation = Quaternion.Slerp(fromRot, toRot, t);
             yield return null;
         }
+
+        OnDestroyed?.Invoke(this); 
         Destroy(gameObject);
     }
 }

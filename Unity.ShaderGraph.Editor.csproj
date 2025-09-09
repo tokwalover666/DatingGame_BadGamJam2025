@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{02212A98-E3B7-69E7-3594-DE6403F3AC21}</ProjectGuid>
+    <ProjectGuid>{F39658FB-4640-D757-F4CE-9FC908F30556}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.ShaderGraph.Editor</AssemblyName>
@@ -452,8 +452,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@26dc5ae27e7d\Editor\Drawing\Inspector\PropertyDrawers\TextPropertyDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@26dc5ae27e7d\Editor\Serialization\JsonObject.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@26dc5ae27e7d\Editor\Data\Graphs\IMaterialGraphAsset.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@26dc5ae27e7d\Editor\Serialization\RefValueEnumerable.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@26dc5ae27e7d\Editor\Data\Graphs\GradientInputMaterialSlot.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@26dc5ae27e7d\Editor\Serialization\RefValueEnumerable.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@26dc5ae27e7d\Editor\Importers\RenderPipelineChangedCallback.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@26dc5ae27e7d\Editor\Generation\Contexts\TargetActiveBlockContext.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@26dc5ae27e7d\Editor\Data\Util\PrecisionUtil.cs" />
@@ -495,8 +495,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@26dc5ae27e7d\Editor\Data\Interfaces\IMayRequirePosition.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@26dc5ae27e7d\Editor\Data\Nodes\Math\Advanced\ReciprocalSquareRootNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@26dc5ae27e7d\Editor\Serialization\FakeJsonObject.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@26dc5ae27e7d\Editor\Data\Nodes\Math\Round\CeilingNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@26dc5ae27e7d\Editor\Drawing\Controls\ButtonControl.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@26dc5ae27e7d\Editor\Data\Nodes\Math\Round\CeilingNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@26dc5ae27e7d\Editor\Util\ValueUtilities.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@26dc5ae27e7d\Editor\Data\Nodes\Input\Texture\SampleCubemapNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@26dc5ae27e7d\Editor\Generation\Enumerations\ZWrite.cs" />
@@ -1911,35 +1911,35 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.ShaderGraph.Utilities.csproj">
-      <Project>{12F12438-300D-E18F-41D7-98BF099045C4}</Project>
+      <Project>{BFE65FC4-47EC-3340-FAEA-3D50E4018DB2}</Project>
       <Name>Unity.ShaderGraph.Utilities</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Searcher.Editor.csproj">
-      <Project>{0D304AC3-ADFE-EC58-8D87-AD7E665D79CD}</Project>
+      <Project>{F899569B-24F1-DB89-8D64-23A49EFF8B15}</Project>
       <Name>Unity.Searcher.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{52E85E99-97BF-12D2-5332-7C2BCE925F36}</Project>
+      <Project>{ECDE8EC6-4008-F84E-6FF3-12D2821D5853}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
-      <Project>{89EAFA47-621E-0375-3E8B-89B1F53DAE28}</Project>
+      <Project>{4492C86C-2369-6A9B-C306-A626525655F2}</Project>
       <Name>Unity.RenderPipelines.Core.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{D6C8A274-342D-7ABF-9580-404B8C0EAB7B}</Project>
+      <Project>{1916FFA6-AE01-0AC4-F799-D3027A253398}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{A387F022-6846-F525-690C-FCC743B0AAD8}</Project>
+      <Project>{35F33B75-1C56-45DD-E3C6-DC30277D472A}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{4E153723-FD3F-C458-DEB3-6E6738D5E5B6}</Project>
+      <Project>{11DE311F-9F81-57A3-54B5-5816E563B346}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{8A77C293-3BBA-2D6F-7FC7-9014531941B4}</Project>
+      <Project>{42FCFE72-36D5-8CD3-F256-718360ECC8E9}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

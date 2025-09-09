@@ -3,9 +3,9 @@ using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 
-public class HoverRaycast : MonoBehaviour
+public class HoverTagManager : MonoBehaviour
 {
-    public static HoverRaycast Instance { get; private set; }
+    public static HoverTagManager Instance { get; private set; }
 
     [Header("UI")]
     [SerializeField] Canvas bubbleCanvas;
@@ -33,7 +33,7 @@ public class HoverRaycast : MonoBehaviour
     private Dictionary<string, string> profileComments = new Dictionary<string, string>()
     {
         { "WolfProfile", "Cute Guy" },
-        { "Yasmin", "slay kween" },
+        { "ToniFowlerProfile", ">////<" },
 
     };
 

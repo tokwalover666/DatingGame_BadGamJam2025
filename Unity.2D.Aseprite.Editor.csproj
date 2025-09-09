@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{FD5B862A-6FD1-165E-E6A4-C220D231FBF1}</ProjectGuid>
+    <ProjectGuid>{C33ED361-B089-3FDA-09BE-7F509A8AD524}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.Aseprite.Editor</AssemblyName>
@@ -102,8 +102,8 @@
     <Compile Include="Library\PackageCache\com.unity.2d.aseprite@fa26c8d7c7e6\Editor\Utilities\Zlib.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.aseprite@fa26c8d7c7e6\Editor\SpriteData.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.aseprite@fa26c8d7c7e6\Editor\Aseprite\Chunks\NoneChunk.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.aseprite@fa26c8d7c7e6\Editor\Inspector\AsepriteImporterEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.aseprite@fa26c8d7c7e6\Editor\Aseprite\Chunks\ColorProfileChunk.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.aseprite@fa26c8d7c7e6\Editor\Inspector\AsepriteImporterEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.aseprite@fa26c8d7c7e6\Editor\AsepriteSpriteEditorDataProvider.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.aseprite@fa26c8d7c7e6\Editor\AsepriteImporterDataProvider.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.aseprite@fa26c8d7c7e6\Editor\Aseprite\Chunks\LayerChunk.cs" />
@@ -1150,51 +1150,51 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj">
-      <Project>{ECFF9208-7FAE-FE44-126C-4E01882DF671}</Project>
+      <Project>{BFE280A4-3E98-FA71-A57E-C61F9EF725A2}</Project>
       <Name>Unity.InternalAPIEditorBridge.001</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
-      <Project>{A1A08D95-9874-06A9-79B6-867291529C44}</Project>
+      <Project>{319098A7-A7AB-D44C-8574-F88ECDCA8968}</Project>
       <Name>Unity.2D.Sprite.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Tilemap.Editor.csproj">
-      <Project>{6511ED01-4108-D3A2-9562-EB40921A77FF}</Project>
+      <Project>{490D51E8-DFE2-2EF3-40BE-56A01F416DCA}</Project>
       <Name>Unity.2D.Tilemap.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Aseprite.Common.csproj">
-      <Project>{145190D3-D167-E3DC-DDA4-25F3502A5B22}</Project>
+      <Project>{8B498CA6-F450-5837-AC2A-F7E87EDAABE3}</Project>
       <Name>Unity.2D.Aseprite.Common</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Burst.csproj">
-      <Project>{BE595CA0-E634-A62B-48EA-2A6E3C4F7DC2}</Project>
+      <Project>{10943988-D352-6719-E393-C8A5E7263027}</Project>
       <Name>Unity.Burst</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{D81013C4-1FA3-C338-0555-FFDCBE1187D9}</Project>
+      <Project>{9F91C2FC-4308-FA21-5F32-A7CCDFB15D97}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
-      <Project>{666C23F9-084A-9A9F-BEDA-A3F2A5387A60}</Project>
+      <Project>{4EE9EBFE-8A04-1B4F-C5D4-3EC9F0CDFB6D}</Project>
       <Name>Unity.RenderPipelines.Universal.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.2D.Runtime.csproj">
-      <Project>{676568EA-2C6C-520A-DCDA-743B1D39C4C3}</Project>
+      <Project>{DDD06D6B-E0E1-E347-C93C-153077B65A38}</Project>
       <Name>Unity.RenderPipelines.Universal.2D.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{D6C8A274-342D-7ABF-9580-404B8C0EAB7B}</Project>
+      <Project>{1916FFA6-AE01-0AC4-F799-D3027A253398}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{A387F022-6846-F525-690C-FCC743B0AAD8}</Project>
+      <Project>{35F33B75-1C56-45DD-E3C6-DC30277D472A}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{4E153723-FD3F-C458-DEB3-6E6738D5E5B6}</Project>
+      <Project>{11DE311F-9F81-57A3-54B5-5816E563B346}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{8A77C293-3BBA-2D6F-7FC7-9014531941B4}</Project>
+      <Project>{42FCFE72-36D5-8CD3-F256-718360ECC8E9}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{23F2E7BD-7478-3E51-E31F-C14E075B3174}</ProjectGuid>
+    <ProjectGuid>{2151090A-04FA-6457-EF9B-C369A11288F0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.TextMeshPro.Editor</AssemblyName>
@@ -100,8 +100,8 @@
     <Compile Include="Library\PackageCache\com.unity.ugui@5c9fd4989cdd\Editor\TMP\TMPro_FontAssetCreatorWindow.cs" />
     <Compile Include="Library\PackageCache\com.unity.ugui@5c9fd4989cdd\Editor\TMP\TMP_EditorUtility.cs" />
     <Compile Include="Library\PackageCache\com.unity.ugui@5c9fd4989cdd\Editor\TMP\TMP_EditorResourceManager.cs" />
-    <Compile Include="Library\PackageCache\com.unity.ugui@5c9fd4989cdd\Editor\TMP\PropertyDrawers\TMP_SpriteCharacterPropertyDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.ugui@5c9fd4989cdd\Editor\TMP\TMP_StyleSheetEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.ugui@5c9fd4989cdd\Editor\TMP\PropertyDrawers\TMP_SpriteCharacterPropertyDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.ugui@5c9fd4989cdd\Editor\TMP\PropertyDrawers\GlyphPairAdjustmentRecordPropertyDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.ugui@5c9fd4989cdd\Editor\TMP\PropertyDrawers\DropdownOptionListDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.ugui@5c9fd4989cdd\Editor\TMP\PropertyDrawers\LigatureSubstitutionRecordPropertyDrawer.cs" />
@@ -1152,27 +1152,27 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{8173751C-8625-50B2-C16B-B34CAE163DEE}</Project>
+      <Project>{EF8E55B0-6D48-F9E6-0268-72FB595650E1}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{52E85E99-97BF-12D2-5332-7C2BCE925F36}</Project>
+      <Project>{ECDE8EC6-4008-F84E-6FF3-12D2821D5853}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{D6C8A274-342D-7ABF-9580-404B8C0EAB7B}</Project>
+      <Project>{1916FFA6-AE01-0AC4-F799-D3027A253398}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{A387F022-6846-F525-690C-FCC743B0AAD8}</Project>
+      <Project>{35F33B75-1C56-45DD-E3C6-DC30277D472A}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{4E153723-FD3F-C458-DEB3-6E6738D5E5B6}</Project>
+      <Project>{11DE311F-9F81-57A3-54B5-5816E563B346}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{8A77C293-3BBA-2D6F-7FC7-9014531941B4}</Project>
+      <Project>{42FCFE72-36D5-8CD3-F256-718360ECC8E9}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

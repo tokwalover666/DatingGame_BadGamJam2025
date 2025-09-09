@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6CE3DEB0-8745-E7AE-3D0D-5BCC67642124}</ProjectGuid>
+    <ProjectGuid>{6A30A081-1246-6E42-340A-D8F8140E4B03}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.Animation.Editor</AssemblyName>
@@ -118,8 +118,8 @@
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SkinningModule\SelectionTool.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SpriteLib\SpriteSelectionWidget.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SkinningModule\WeightsGenerator\BoundedBiharmonicWeightsGenerator.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SpriteLib\SpriteLibraryDataProvider.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SpriteSkin\BoneGizmo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SpriteLib\SpriteLibraryDataProvider.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SkinningModule\MeshPreviewTool\MeshPreviewTool.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SkinningModule\SkinningCache\SkinningCache.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SkinningModule\ModuleToolGroup.cs" />
@@ -130,8 +130,8 @@
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SpriteLib\SpriteLibraryEditor\DragAndDropData.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SkinningModule\Selection\SerializableSelection.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SkinningModule\WeightPainterTool.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SkinningModule\SkinningCache\TransformCacheExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SkinningModule\SpriteMeshData\SpriteMeshDataController.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SkinningModule\SkinningCache\TransformCacheExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SpriteLib\SpriteLibraryEditor\UI\CategoriesTab.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SkinningModule\SkinningCache\SkeletonCache.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SkinningModule\Selectors\ICircleSelector.cs" />
@@ -184,14 +184,14 @@
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SkinningModule\BaseTool.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SkinningModule\Cache\Cache.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SkinningModule\MathUtility.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SpriteSkin\BoneGizmoToggle.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SkinningModule\Selectors\RectVertexSelector.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SpriteSkin\BoneGizmoToggle.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SkinningModule\MeshPreviewTool\IMeshPreviewBehaviour.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SkinningModule\VisibilityTool\MeshVisibilityTool.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SkinningModule\Triangulation\TriangulationUtility.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\UpgradeTools\Utilities\ButtonStripField.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SpriteLib\SpriteLibraryEditor\UI\LabelsTab.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SkinningModule\OutlineGenerator\OutlineGenerator.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SpriteLib\SpriteLibraryEditor\UI\LabelsTab.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SkinningModule\UI\BoneToolbar.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SkinningModule\SkinningCache\SkeletonCacheExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@81ad133dbdf1\Editor\SkinningModule\BatchedDrawing.cs" />
@@ -1341,55 +1341,55 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj">
-      <Project>{ECFF9208-7FAE-FE44-126C-4E01882DF671}</Project>
+      <Project>{BFE280A4-3E98-FA71-A57E-C61F9EF725A2}</Project>
       <Name>Unity.InternalAPIEditorBridge.001</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
-      <Project>{D50329A3-8FAB-F252-89FA-200A6B7A56E9}</Project>
+      <Project>{19096361-F24B-9A39-BDD5-7316B79FB2F6}</Project>
       <Name>Unity.InternalAPIEngineBridge.001</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Common.Editor.csproj">
-      <Project>{59D7186F-383E-9343-8FFD-B52CC3EA4C19}</Project>
+      <Project>{0269A6C8-C8FB-FD3B-3671-2A9B3CC0935C}</Project>
       <Name>Unity.2D.Common.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
-      <Project>{508D70EF-7A25-1C50-E3D7-336AC1ADEA97}</Project>
+      <Project>{80517244-ABB6-2B9D-7336-F2C20439B934}</Project>
       <Name>Unity.2D.Common.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Animation.Runtime.csproj">
-      <Project>{2B4E82EA-D471-A6BF-AA73-BCFD4DBF9FBD}</Project>
+      <Project>{4C1385A6-4572-413C-84CA-1341F9EDBDF4}</Project>
       <Name>Unity.2D.Animation.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
-      <Project>{A1A08D95-9874-06A9-79B6-867291529C44}</Project>
+      <Project>{319098A7-A7AB-D44C-8574-F88ECDCA8968}</Project>
       <Name>Unity.2D.Sprite.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{D81013C4-1FA3-C338-0555-FFDCBE1187D9}</Project>
+      <Project>{9F91C2FC-4308-FA21-5F32-A7CCDFB15D97}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Burst.csproj">
-      <Project>{BE595CA0-E634-A62B-48EA-2A6E3C4F7DC2}</Project>
+      <Project>{10943988-D352-6719-E393-C8A5E7263027}</Project>
       <Name>Unity.Burst</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Collections.csproj">
-      <Project>{082DC5AA-8FF8-55AE-E99F-265FCEDFA7C1}</Project>
+      <Project>{24783E7A-4DF2-9CF8-D967-75D26FFACDE1}</Project>
       <Name>Unity.Collections</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{D6C8A274-342D-7ABF-9580-404B8C0EAB7B}</Project>
+      <Project>{1916FFA6-AE01-0AC4-F799-D3027A253398}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{A387F022-6846-F525-690C-FCC743B0AAD8}</Project>
+      <Project>{35F33B75-1C56-45DD-E3C6-DC30277D472A}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{4E153723-FD3F-C458-DEB3-6E6738D5E5B6}</Project>
+      <Project>{11DE311F-9F81-57A3-54B5-5816E563B346}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{8A77C293-3BBA-2D6F-7FC7-9014531941B4}</Project>
+      <Project>{42FCFE72-36D5-8CD3-F256-718360ECC8E9}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>
