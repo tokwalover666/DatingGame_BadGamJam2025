@@ -1155,10 +1155,6 @@
       <Project>{EF8E55B0-6D48-F9E6-0268-72FB595650E1}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{ECDE8EC6-4008-F84E-6FF3-12D2821D5853}</Project>
-      <Name>Unity.RenderPipelines.Core.Runtime</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{1916FFA6-AE01-0AC4-F799-D3027A253398}</Project>
       <Name>UnityEditor.UI</Name>
