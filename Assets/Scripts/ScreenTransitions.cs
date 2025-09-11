@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ScreenTransitions : MonoBehaviour
 {
-    [SerializeField] GameObject cardStack;
+
     [SerializeField] Transform chatScreen;
     [SerializeField] Vector3 hiddenPos = new Vector3(5.37f, 1.61f, -4.85f);
     [SerializeField] Vector3 visiblePos = new Vector3(0f, 1.61f, -4.85f);
@@ -26,7 +26,7 @@ public class ScreenTransitions : MonoBehaviour
     {
         if (moveRoutine != null) StopCoroutine(moveRoutine);
         moveRoutine = StartCoroutine(MoveTo(chatScreen, hiddenPos, duration, false));
-        cardStack.SetActive(true);
+        
     }
 
     private IEnumerator MoveTo(Transform target, Vector3 targetPos, float time, bool showingChat)
@@ -43,9 +43,5 @@ public class ScreenTransitions : MonoBehaviour
 
         target.position = targetPos;
 
-        if (showingChat)
-        {
-            cardStack.SetActive(false);
-        }
     }
 }

@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\91291\\Documents\\GitHub\\DatingGame_BadGamJam2025\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A88F4852-ACB1-A6B7-1D00-9D5878398685}|Assembly-CSharp.csproj|c:\\users\\91291\\documents\\github\\datinggame_badgamjam2025\\assets\\scripts\\swipecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A88F4852-ACB1-A6B7-1D00-9D5878398685}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\swipecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A88F4852-ACB1-A6B7-1D00-9D5878398685}|Assembly-CSharp.csproj|c:\\users\\91291\\documents\\github\\datinggame_badgamjam2025\\assets\\scripts\\matchmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A88F4852-ACB1-A6B7-1D00-9D5878398685}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\matchmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A88F4852-ACB1-A6B7-1D00-9D5878398685}|Assembly-CSharp.csproj|c:\\users\\91291\\documents\\github\\datinggame_badgamjam2025\\assets\\scripts\\swipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A88F4852-ACB1-A6B7-1D00-9D5878398685}|Assembly-CSharp.csproj|C:\\Users\\91291\\Documents\\GitHub\\DatingGame_BadGamJam2025\\assets\\scripts\\screentransitions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A88F4852-ACB1-A6B7-1D00-9D5878398685}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\screentransitions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A88F4852-ACB1-A6B7-1D00-9D5878398685}|Assembly-CSharp.csproj|c:\\users\\91291\\documents\\github\\datinggame_badgamjam2025\\assets\\scripts\\hovertagmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A88F4852-ACB1-A6B7-1D00-9D5878398685}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\hovertagmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A88F4852-ACB1-A6B7-1D00-9D5878398685}|Assembly-CSharp.csproj|C:\\Users\\91291\\Documents\\GitHub\\DatingGame_BadGamJam2025\\assets\\scripts\\swipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A88F4852-ACB1-A6B7-1D00-9D5878398685}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\swipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A88F4852-ACB1-A6B7-1D00-9D5878398685}|Assembly-CSharp.csproj|C:\\Users\\91291\\Documents\\GitHub\\DatingGame_BadGamJam2025\\assets\\scripts\\screentransitions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A88F4852-ACB1-A6B7-1D00-9D5878398685}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\screentransitions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A88F4852-ACB1-A6B7-1D00-9D5878398685}|Assembly-CSharp.csproj|c:\\users\\91291\\documents\\github\\datinggame_badgamjam2025\\assets\\scripts\\swipecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A88F4852-ACB1-A6B7-1D00-9D5878398685}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\swipecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,31 +29,44 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 159,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 221,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "HoverTagManager.cs",
+              "DocumentMoniker": "C:\\Users\\91291\\Documents\\GitHub\\DatingGame_BadGamJam2025\\Assets\\Scripts\\HoverTagManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\HoverTagManager.cs",
+              "ToolTip": "C:\\Users\\91291\\Documents\\GitHub\\DatingGame_BadGamJam2025\\Assets\\Scripts\\HoverTagManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\HoverTagManager.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAUwCIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T16:19:23.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "SwipeController.cs",
               "DocumentMoniker": "C:\\Users\\91291\\Documents\\GitHub\\DatingGame_BadGamJam2025\\Assets\\Scripts\\SwipeController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SwipeController.cs",
               "ToolTip": "C:\\Users\\91291\\Documents\\GitHub\\DatingGame_BadGamJam2025\\Assets\\Scripts\\SwipeController.cs",
               "RelativeToolTip": "Assets\\Scripts\\SwipeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-11T15:19:33.433Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MatchManager.cs",
               "DocumentMoniker": "C:\\Users\\91291\\Documents\\GitHub\\DatingGame_BadGamJam2025\\Assets\\Scripts\\MatchManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MatchManager.cs",
               "ToolTip": "C:\\Users\\91291\\Documents\\GitHub\\DatingGame_BadGamJam2025\\Assets\\Scripts\\MatchManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\MatchManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAswCcAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-11T15:06:24.521Z",
               "EditorCaption": ""
@@ -57,31 +74,31 @@
           ]
         },
         {
-          "DockedWidth": 241,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 179,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "ScreenTransitions.cs",
               "DocumentMoniker": "C:\\Users\\91291\\Documents\\GitHub\\DatingGame_BadGamJam2025\\Assets\\Scripts\\ScreenTransitions.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ScreenTransitions.cs",
               "ToolTip": "C:\\Users\\91291\\Documents\\GitHub\\DatingGame_BadGamJam2025\\Assets\\Scripts\\ScreenTransitions.cs",
               "RelativeToolTip": "Assets\\Scripts\\ScreenTransitions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-11T14:51:10.643Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "SwipeCard.cs",
               "DocumentMoniker": "C:\\Users\\91291\\Documents\\GitHub\\DatingGame_BadGamJam2025\\Assets\\Scripts\\SwipeCard.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SwipeCard.cs",
               "ToolTip": "C:\\Users\\91291\\Documents\\GitHub\\DatingGame_BadGamJam2025\\Assets\\Scripts\\SwipeCard.cs",
               "RelativeToolTip": "Assets\\Scripts\\SwipeCard.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAuwG8AAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAFIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-11T14:58:23.57Z",
               "EditorCaption": ""

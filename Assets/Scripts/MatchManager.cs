@@ -4,6 +4,8 @@ using System.Collections;
 
 public class MatchManager : MonoBehaviour
 {
+    [SerializeField] GameObject hand;
+    [SerializeField] GameObject cardStack;
     [Header("Popup UI")]
     [SerializeField] GameObject matchPopup;    
     [SerializeField] float popupAnimDuration = 0.3f;
@@ -18,6 +20,7 @@ public class MatchManager : MonoBehaviour
     void Awake()
     {
         popupRect = matchPopup.GetComponent<RectTransform>();
+        matchPopup.SetActive(false);
     }
 
     public void CheckMatch(string cardName)
@@ -34,7 +37,9 @@ public class MatchManager : MonoBehaviour
 
     void ShowPopup(string cardName)
     {
-
+        matchPopup.SetActive(true);
+        cardStack.SetActive(false);
+        hand.SetActive(false);
         StopAllCoroutines();
         StartCoroutine(AnimatePopup());
     }
