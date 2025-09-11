@@ -5,8 +5,8 @@ public class ScreenTransitions : MonoBehaviour
 {
     [SerializeField] GameObject cardStack;
     [SerializeField] Transform chatScreen;
-    [SerializeField] Vector3 hiddenPos = new Vector3(5.37f, 1.61f, -1.44f);
-    [SerializeField] Vector3 visiblePos = new Vector3(0f, 1.61f, -1.44f);
+    [SerializeField] Vector3 hiddenPos = new Vector3(5.37f, 1.61f, -4.85f);
+    [SerializeField] Vector3 visiblePos = new Vector3(0f, 1.61f, -4.85f);
     [SerializeField] float duration = 0.5f;
 
     private Coroutine moveRoutine;
