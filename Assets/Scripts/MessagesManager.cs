@@ -32,6 +32,8 @@ public class MessagesManager : MonoBehaviour
     {
         chatHeadTMP.text = "hey…";
         enableNextChat = true;
+        capuccinaChats[currentChatIndex].SetActive(true);
+        currentChatIndex++;
     }
 
     void Update()

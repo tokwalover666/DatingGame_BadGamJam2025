@@ -29,9 +29,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Levels: 11.2
+    - _Levels: 10.9
     - _NoiseScale: 1
-    - _NoiseStrength: 0.014
+    - _NoiseStrength: 0.02
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
