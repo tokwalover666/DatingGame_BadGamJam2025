@@ -10,8 +10,7 @@ public class SwipeController : MonoBehaviour
 
     [SerializeField] float cardSpacing = 0.05f;
     [SerializeField] float reorderSpeed = 5f;
-
-    // Animation refs
+     
     [SerializeField] GameObject swipedLeftAnim;
     [SerializeField] GameObject swipedRightAnim;
     [SerializeField] GameObject idleAnim;
@@ -40,12 +39,11 @@ public class SwipeController : MonoBehaviour
     {
         if (CurrentCard == null) return;
         CurrentCard.HandleInput();
-
-        // check halfway position
-        float halfway = Screen.width * 0.25f; // quarter of screen from center
+         
+        float halfway = Screen.width * 0.25f;  
         float delta = Input.mousePosition.x - (Screen.width * 0.5f);
 
-        if (Input.GetMouseButton(0)) // while dragging
+        if (Input.GetMouseButton(0)) 
         {
             if (Mathf.Abs(delta) > halfway)
             {
@@ -58,8 +56,7 @@ public class SwipeController : MonoBehaviour
             }
         }
         else if (!Input.GetMouseButton(0) && !CurrentCard.HasFlownOff)
-        {
-            // when released but snapped back
+        { 
             SetIdleAnim();
         }
 

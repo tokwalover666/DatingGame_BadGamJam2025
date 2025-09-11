@@ -31,8 +31,31 @@ public class HoverTagManager : MonoBehaviour
 
     private Dictionary<string, string> profileComments = new Dictionary<string, string>()
     {
-        { "WolfProfile", "Cute Guy" },
-        { "ToniFowlerProfile", ">////<" },
+        { "WolfProfile", "AWOOOO" },
+        { "ToniFowlerProfile", "Sarap" },
+        { "BrocolliProfile", ">////<" },
+        { "PoohProfile", ">////<" },
+        { "CappucinaProfile", ">////<" },
+        { "CrocodilloProfile", ">////<" },
+        { "CocoProfile", ">////<" },
+        { "KapProfile", ">////<" },
+        { "DivoredChildProfile", ">////<" },
+        { "GamerBoyProfile", ">////<" },
+        { "MagicTomboyProfile", ">////<" },
+        { "TreeBrainrotProfile", ">////<" },
+        { "JA_NormalProfile", ">////<" },
+        { "JA_TalikodProfile", ">////<" },
+        { "JA_UpoProfile", ">////<" },
+        { "JA_HandStandProfile", ">////<" },
+        { "JA_PerformativeProfile", ">////<" },
+        { "JA_EmoProfile", ">////<" },
+        { "JA_DrStrangeProfile", ">////<" },
+        { "JA_BumberoProfile", ">////<" },
+        { "JA_ZenitsuProfile", ">////<" },
+        { "JA_InosukeProfile", ">////<" },
+        { "JA_AkazaProfile", ">////<" },
+        { "JA_GiyuProfile", ">////<" },
+        { "JA_GojoProfile", ">////<" },
 
     };
 
