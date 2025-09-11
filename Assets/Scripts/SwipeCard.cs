@@ -12,9 +12,7 @@ public class SwipeCard : MonoBehaviour
     [SerializeField] float returnSpeed = 10f;
     [SerializeField] float offscreenDistance = 1000f;
     [SerializeField] float flyOutDuration = 1f;
-    [SerializeField] GameObject swipedLeftAnim;
-    [SerializeField] GameObject swipedRightAnim;
-    [SerializeField] GameObject clickAnim;
+
 
     Vector3 startPos;
     Quaternion startRot;
@@ -31,6 +29,8 @@ public class SwipeCard : MonoBehaviour
 
     void Start()
     {
+
+
         startPos = transform.position;
         startRot = transform.rotation;
         lastPos = transform.position;
@@ -110,8 +110,11 @@ public class SwipeCard : MonoBehaviour
         Vector3 toPos = fromPos + dir * offscreenDistance;
 
         float t = 0f;
+
+
         while (t < 0.6f)
         {
+
             t += Time.deltaTime / Mathf.Max(flyOutDuration, 0.0001f);
             transform.position = Vector3.Lerp(fromPos, toPos, t);
             transform.rotation = releaseRot;
@@ -120,6 +123,8 @@ public class SwipeCard : MonoBehaviour
 
         if (dir == Vector3.right)
         {
+
+
             MatchManager mm = FindFirstObjectByType<MatchManager>();
             if (mm != null) mm.CheckMatch(gameObject.name);
         }

@@ -11,6 +11,11 @@ public class SwipeController : MonoBehaviour
     [SerializeField] float cardSpacing = 0.05f;
     [SerializeField] float reorderSpeed = 5f;
 
+    // Animation refs
+    [SerializeField] GameObject swipedLeftAnim;
+    [SerializeField] GameObject swipedRightAnim;
+    [SerializeField] GameObject idleAnim;
+
     void Start()
     {
         cards.Clear();
@@ -27,6 +32,8 @@ public class SwipeController : MonoBehaviour
                 c.transform.localPosition = pos;
             }
         }
+
+        SetIdleAnim();
     }
 
     void Update()
@@ -34,7 +41,28 @@ public class SwipeController : MonoBehaviour
         if (CurrentCard == null) return;
         CurrentCard.HandleInput();
 
-        // Only reorder when callback triggers
+        // check halfway position
+        float halfway = Screen.width * 0.25f; // quarter of screen from center
+        float delta = Input.mousePosition.x - (Screen.width * 0.5f);
+
+        if (Input.GetMouseButton(0)) // while dragging
+        {
+            if (Mathf.Abs(delta) > halfway)
+            {
+                if (delta > 0) SetRightAnim();
+                else SetLeftAnim();
+            }
+            else
+            {
+                SetIdleAnim();
+            }
+        }
+        else if (!Input.GetMouseButton(0) && !CurrentCard.HasFlownOff)
+        {
+            // when released but snapped back
+            SetIdleAnim();
+        }
+
         ReorderCardsSmooth();
     }
 
@@ -56,5 +84,26 @@ public class SwipeController : MonoBehaviour
                 cards[i].transform.localPosition = pos;
             }
         }
+    }
+
+    void SetIdleAnim()
+    {
+        idleAnim.SetActive(true);
+        swipedLeftAnim.SetActive(false);
+        swipedRightAnim.SetActive(false);
+    }
+
+    void SetLeftAnim()
+    {
+        idleAnim.SetActive(false);
+        swipedLeftAnim.SetActive(true);
+        swipedRightAnim.SetActive(false);
+    }
+
+    void SetRightAnim()
+    {
+        idleAnim.SetActive(false);
+        swipedLeftAnim.SetActive(false);
+        swipedRightAnim.SetActive(true);
     }
 }
