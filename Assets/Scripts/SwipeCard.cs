@@ -12,6 +12,9 @@ public class SwipeCard : MonoBehaviour
     [SerializeField] float returnSpeed = 10f;
     [SerializeField] float offscreenDistance = 1000f;
     [SerializeField] float flyOutDuration = 1f;
+    [SerializeField] GameObject swipedLeftAnim;
+    [SerializeField] GameObject swipedRightAnim;
+    [SerializeField] GameObject clickAnim;
 
     Vector3 startPos;
     Quaternion startRot;
@@ -103,7 +106,7 @@ public class SwipeCard : MonoBehaviour
     {
         HasFlownOff = true;
         Vector3 fromPos = transform.position;
-        Quaternion releaseRot = transform.rotation; 
+        Quaternion releaseRot = transform.rotation;
         Vector3 toPos = fromPos + dir * offscreenDistance;
 
         float t = 0f;
@@ -111,15 +114,20 @@ public class SwipeCard : MonoBehaviour
         {
             t += Time.deltaTime / Mathf.Max(flyOutDuration, 0.0001f);
             transform.position = Vector3.Lerp(fromPos, toPos, t);
-
             transform.rotation = releaseRot;
-
             yield return null;
+        }
+
+        if (dir == Vector3.right)
+        {
+            MatchManager mm = FindFirstObjectByType<MatchManager>();
+            if (mm != null) mm.CheckMatch(gameObject.name);
         }
 
         OnDestroyed?.Invoke(this);
         Destroy(gameObject);
     }
+
 
 
 }
