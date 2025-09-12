@@ -47,6 +47,7 @@ public class MessagesManager : MonoBehaviour
 
     public void ClickChoice1()
     {
+        AudioManager.Instance.ClickSound();
         chatHeadTMP.text = "hello hot stuff";
         enableNextChatCapucinna = true;
 
@@ -59,6 +60,7 @@ public class MessagesManager : MonoBehaviour
 
     public void ClickChoice2()
     {
+        AudioManager.Instance.ClickSound();
         chatHeadTMP.text = "hey…";
         enableNextChatCapucinna = true;
 
@@ -71,6 +73,7 @@ public class MessagesManager : MonoBehaviour
 
     public void ClickMisoScreen()
     {
+        AudioManager.Instance.ClickSound();
         enableNextChatMiso = true;
         Debug.Log("miso");
 
@@ -97,6 +100,7 @@ public class MessagesManager : MonoBehaviour
         {
             capuccinaChats[currentChatIndex].SetActive(true);
             currentChatIndex++;
+            AudioManager.Instance.ChatNotif();
 
             if (currentChatIndex >= capuccinaChats.Count && dateButtonCina != null)
             {

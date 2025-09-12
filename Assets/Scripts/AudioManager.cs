@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    public static AudioManager Instance;
     public AudioClip[] audios;
 
     private AudioSource[] audioSources;
@@ -10,26 +11,41 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); 
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         audioSources = GetComponents<AudioSource>();
         audioSource = GetComponent<AudioSource>();
-
     }
 
     public void PlaySwipeLeftSound()
     {
-        PlayAudio("   ");
-        Debug.Log("Play swipe left");
-
+        PlayAudio("LeftSwipe");
     }
 
     public void PlaySwipeRightSound()
     {
 
-        PlayAudio("   ");
-        Debug.Log("Play explosion");
-
+        PlayAudio("RightSwipe");
     }
+    public void ChatNotif()
+    {
 
+        PlayAudio("Chat_Notif");
+    }
+    public void ClickSound()
+    {
+
+        PlayAudio("Click");
+    }
 
     private void PlayAudio(string audioName)
     {

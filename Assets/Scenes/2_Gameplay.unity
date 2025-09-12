@@ -9433,7 +9433,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60bce45b4004b514d92a43cac60d9bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audios: []
+  audios:
+  - {fileID: 8300000, guid: efc63d7c7a49bea489c00b32fe1dbc77, type: 3}
+  - {fileID: 8300000, guid: 7e76e054ec710ec4894bf31a58b431c1, type: 3}
+  - {fileID: 8300000, guid: 51f3084898ca8654cb23b9a36ad63cd7, type: 3}
+  - {fileID: 8300000, guid: 5b90f8eb5080bdb48809caa8c9c0eb76, type: 3}
+  - {fileID: 8300000, guid: c4329e3317af3344da28d83b57b29944, type: 3}
+  - {fileID: 8300000, guid: 87fc8f47f3bb2d84099989a948bbefeb, type: 3}
+  - {fileID: 8300000, guid: 3b4e196fbb3e8dd42a5d626c66c7a22d, type: 3}
+  - {fileID: 8300000, guid: 059f4afcf12930e428e678b9624533db, type: 3}
 --- !u!4 &1832313068
 Transform:
   m_ObjectHideFlags: 0
