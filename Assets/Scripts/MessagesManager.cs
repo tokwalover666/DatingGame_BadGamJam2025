@@ -17,7 +17,6 @@ public class MessagesManager : MonoBehaviour
     [Header("Final Step")]
     [SerializeField] Button dateButtonCina;
     [SerializeField] Button dateButtonMiso;
-    [SerializeField] GameObject finalImage;
 
     private int currentChatIndex = 0;
     private bool enableNextChatCapucinna = false;
@@ -33,7 +32,6 @@ public class MessagesManager : MonoBehaviour
 
         // Hide final UI elements
         if (dateButtonCina != null) dateButtonCina.gameObject.SetActive(false);
-        if (finalImage != null) finalImage.SetActive(false);
 
         // Add listeners
         if (dateButtonCina != null) dateButtonCina.onClick.AddListener(ShowFinalImage);
@@ -138,9 +136,9 @@ public class MessagesManager : MonoBehaviour
         AudioManager.Instance.StopBGM();
         AudioManager.Instance.PlayBGM("Romance");  // <-- fixed
 
-        if (finalImage != null) finalImage.SetActive(true);
-
         if (chatHeadTMP != null) chatHeadTMP.text = "";
+
+        SceneManager.LoadScene("3_EndingCutscene");
     }
 
 }
