@@ -1,20 +1,19 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
     public AudioClip[] audios;
 
-    private AudioSource[] audioSources;
-    private AudioSource audioSource;
-
+    private AudioSource sfxSource; // for sound effects
+    private AudioSource bgmSource; // for background music
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); 
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -22,86 +21,52 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        audioSources = GetComponents<AudioSource>();
-        audioSource = GetComponent<AudioSource>();
+        // Add two separate AudioSources
+        sfxSource = gameObject.AddComponent<AudioSource>();
+        bgmSource = gameObject.AddComponent<AudioSource>();
+
+        bgmSource.loop = true; // bgm should loop
+        sfxSource.loop = false; // sfx should not loop
     }
 
-    public void PlaySwipeLeftSound()
-    {
-        PlayAudio("LeftSwipe");
-    }
+    // 🔊 SFX methods
+    public void PlaySwipeLeftSound() => PlaySFX("LeftSwipe");
+    public void PlaySwipeRightSound() => PlaySFX("RightSwipe");
+    public void ChatNotif() => PlaySFX("Chat_Notif");
+    public void ClickSound() => PlaySFX("Click");
 
-    public void PlaySwipeRightSound()
-    {
-
-        PlayAudio("RightSwipe");
-    }
-    public void ChatNotif()
-    {
-
-        PlayAudio("Chat_Notif");
-    }
-    public void ClickSound()
-    {
-
-        PlayAudio("Click");
-    }
-
-    private void PlayAudio(string audioName)
+    private void PlaySFX(string audioName)
     {
         AudioClip clip = FindAudioByName(audioName);
+        if (clip == null) return;
 
-
-        audioSource.clip = clip;
-        audioSource.loop = false;
-        audioSource.Play();
-
-
+        sfxSource.PlayOneShot(clip);
     }
 
+    // 🎵 BGM methods
+    public void PlayBGM(string audioName)
+    {
+        AudioClip clip = FindAudioByName(audioName);
+        if (clip == null) return;
+
+        bgmSource.clip = clip;
+        bgmSource.Play();
+    }
+
+    public void StopBGM()
+    {
+        bgmSource.Stop();
+    }
+
+    // Helpers
     private AudioClip FindAudioByName(string audioName)
     {
         foreach (AudioClip audio in audios)
         {
             if (audio.name == audioName)
-            {
                 return audio;
-            }
         }
+        Debug.LogWarning("Audio not found: " + audioName);
         return null;
-    }
-
-    private AudioSource GetAudioSourceByClip(AudioClip clip)
-    {
-        foreach (AudioSource source in audioSources)
-        {
-            if (source.clip == clip)
-            {
-                return source;
-            }
-        }
-        return null;
-    }
-
-    public void SetPitchForAudioClip(string audioName, float pitch)
-    {
-        AudioClip clip = FindAudioByName(audioName);
-
-        if (clip != null)
-        {
-            AudioSource source = GetAudioSourceByClip(clip);
-            if (source != null)
-            {
-                source.pitch = pitch;
-            }
-            else
-            {
-                Debug.LogError("No AudioSource found playing the clip: " + audioName);
-            }
-        }
-        else
-        {
-            Debug.LogError("Audio clip not found: " + audioName);
-        }
     }
 }

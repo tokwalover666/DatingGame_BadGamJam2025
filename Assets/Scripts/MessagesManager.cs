@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
 using UnityEngine.UI;
@@ -14,7 +14,6 @@ public class MessagesManager : MonoBehaviour
     [SerializeField] Button choiceButton1;
     [SerializeField] Button choiceButton2;
 
-
     [Header("Final Step")]
     [SerializeField] Button dateButtonCina;
     [SerializeField] Button dateButtonMiso;
@@ -26,16 +25,11 @@ public class MessagesManager : MonoBehaviour
 
     void Start()
     {
-
         foreach (var chat in capuccinaChats)
-        {
             chat.SetActive(false);
-        }
 
         foreach (var chat in misoChats)
-        {
             chat.SetActive(false);
-        }
 
         // Hide final UI elements
         if (dateButtonCina != null) dateButtonCina.gameObject.SetActive(false);
@@ -43,11 +37,14 @@ public class MessagesManager : MonoBehaviour
 
         // Add listeners
         if (dateButtonCina != null) dateButtonCina.onClick.AddListener(ShowFinalImage);
+
+        // 🎵 Start background music for chats
+        AudioManager.Instance.PlayBGM("ChatBGM");
     }
 
     public void ClickChoice1()
     {
-        AudioManager.Instance.ClickSound();
+        AudioManager.Instance.ClickSound(); // 🔊 SFX
         chatHeadTMP.text = "hello hot stuff";
         enableNextChatCapucinna = true;
 
@@ -60,11 +57,10 @@ public class MessagesManager : MonoBehaviour
 
     public void ClickChoice2()
     {
-        AudioManager.Instance.ClickSound();
-        chatHeadTMP.text = "hey�";
+        AudioManager.Instance.ClickSound(); // 🔊 SFX
+        chatHeadTMP.text = "hey…";
         enableNextChatCapucinna = true;
 
-        // Hide choice buttons immediately
         if (choiceButton1 != null) choiceButton1.gameObject.SetActive(false);
         if (choiceButton2 != null) choiceButton2.gameObject.SetActive(false);
 
@@ -73,25 +69,20 @@ public class MessagesManager : MonoBehaviour
 
     public void ClickMisoScreen()
     {
-        AudioManager.Instance.ClickSound();
+        AudioManager.Instance.ClickSound(); // 🔊 SFX
         enableNextChatMiso = true;
         Debug.Log("miso");
 
         ShowChatMiso();
-
     }
 
     void Update()
     {
         if (enableNextChatCapucinna && Input.GetMouseButtonDown(0))
-        {
             NextChatCapuccina();
-        }
 
         if (enableNextChatMiso && Input.GetMouseButtonDown(0))
-        {
             NextChatMiso();
-        }
     }
 
     void ShowChatCapucinna()
@@ -100,12 +91,11 @@ public class MessagesManager : MonoBehaviour
         {
             capuccinaChats[currentChatIndex].SetActive(true);
             currentChatIndex++;
-            AudioManager.Instance.ChatNotif();
+
+            AudioManager.Instance.ChatNotif(); // 🔊 notif sound
 
             if (currentChatIndex >= capuccinaChats.Count && dateButtonCina != null)
-            {
                 dateButtonCina.gameObject.SetActive(true);
-            }
         }
     }
 
@@ -116,44 +106,41 @@ public class MessagesManager : MonoBehaviour
             misoChats[currentChatIndex].SetActive(true);
             currentChatIndex++;
 
+            AudioManager.Instance.ChatNotif(); // 🔊 notif sound
+
             if (currentChatIndex >= misoChats.Count && dateButtonMiso != null)
-            {
                 dateButtonMiso.gameObject.SetActive(true);
-            }
         }
     }
 
     public void NextChatCapuccina()
     {
         if (enableNextChatCapucinna && currentChatIndex < capuccinaChats.Count)
-        {
             ShowChatCapucinna();
-        }
     }
 
     public void NextChatMiso()
     {
         if (enableNextChatMiso && currentChatIndex < misoChats.Count)
-        {
             ShowChatMiso();
-        }
     }
 
     void ShowFinalImage()
     {
         // Hide all chats
         foreach (var chat in capuccinaChats)
-        {
             chat.SetActive(false);
-        }
 
         // Hide final button
         if (dateButtonCina != null) dateButtonCina.gameObject.SetActive(false);
 
-        // Show final image
+        // 🎵 Switch music to romance
+        AudioManager.Instance.StopBGM();
+        AudioManager.Instance.PlayBGM("Romance");  // <-- fixed
+
         if (finalImage != null) finalImage.SetActive(true);
 
-        // Clear chat head text
         if (chatHeadTMP != null) chatHeadTMP.text = "";
     }
+
 }

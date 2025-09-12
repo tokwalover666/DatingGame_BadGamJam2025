@@ -39,6 +39,8 @@ public class MatchManager : MonoBehaviour
 
     void ShowPopup(string cardName)
     {
+        AudioManager.Instance.StopBGM();
+        AudioManager.Instance.PlayBGM("Romance");  // <-- fixed
         matchPopup.SetActive(true);
         cardStack.SetActive(false);
         hand.SetActive(false);

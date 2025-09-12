@@ -75,7 +75,15 @@ public class SwipeCard : MonoBehaviour
                 bool fast = Mathf.Abs(velocity.x) > swipeVelocityThreshold;
 
                 if (far || fast)
+                {
+                    // Play swipe sound depending on direction
+                    if (dragDelta.x > 0)
+                        AudioManager.Instance.PlaySwipeRightSound();
+                    else
+                        AudioManager.Instance.PlaySwipeLeftSound();
+
                     StartCoroutine(FlyOff(dragDelta.x > 0 ? Vector3.right : Vector3.left));
+                }
                 else
                     StartCoroutine(SnapBack());
             }
