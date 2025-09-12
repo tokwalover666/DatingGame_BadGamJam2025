@@ -308,7 +308,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 06d3521664ccb5046bfec127f110a0d8, type: 3}
   - {fileID: 21300000, guid: 494c1eaa0b28791469d24af470d3c239, type: 3}
   - {fileID: 21300000, guid: 6ae1e14b5373dc64f90ffe0ada3469ad, type: 3}
-  - {fileID: 21300000, guid: 1ea3b2a345a32f14185dafb1199e00d3, type: 3}
+  - {fileID: 21300000, guid: 4f77f0f68c92d984ea99169d9119909e, type: 3}
   - {fileID: 21300000, guid: 58f2d2f5eed0bf546ad47e7098ad8e34, type: 3}
 --- !u!4 &336763717
 Transform:
