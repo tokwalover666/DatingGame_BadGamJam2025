@@ -13,17 +13,21 @@ public class MessagesManager : MonoBehaviour
     [Header("Choices")]
     [SerializeField] Button choiceButton1;
     [SerializeField] Button choiceButton2;
+    [SerializeField] GameObject capuccinaMessages;
+    [SerializeField] GameObject misoMessages;
 
     [Header("Final Step")]
     [SerializeField] Button dateButtonCina;
     [SerializeField] Button dateButtonMiso;
 
-    private int currentChatIndex = 0;
+    private int currentCinaIndex = 0;
+    private int currentMisoIndex = 0;
     private bool enableNextChatCapucinna = false;
     private bool enableNextChatMiso = false;
 
     void Start()
     {
+        misoMessages.SetActive(false);
         foreach (var chat in capuccinaChats)
             chat.SetActive(false);
 
@@ -67,11 +71,7 @@ public class MessagesManager : MonoBehaviour
 
     public void ClickMisoScreen()
     {
-        AudioManager.Instance.ClickSound(); // 🔊 SFX
-        enableNextChatMiso = true;
-        Debug.Log("miso");
 
-        ShowChatMiso();
     }
 
     void Update()
@@ -79,47 +79,69 @@ public class MessagesManager : MonoBehaviour
         if (enableNextChatCapucinna && Input.GetMouseButtonDown(0))
             NextChatCapuccina();
 
-        if (enableNextChatMiso && Input.GetMouseButtonDown(0))
+        if (MatchManager.isMisoMatched == true)
+        {
+            capuccinaMessages.SetActive(false);
+            misoMessages.SetActive(true);
+        }
+
+        if (ScreenTransitions.enableCatChat == true && Input.GetMouseButtonDown(0))
+        {
+
+            enableNextChatMiso = true;
+            Debug.Log("miso");
+
             NextChatMiso();
+        }
+            
     }
 
     void ShowChatCapucinna()
     {
-        if (currentChatIndex < capuccinaChats.Count)
+        if (currentCinaIndex < capuccinaChats.Count)
         {
-            capuccinaChats[currentChatIndex].SetActive(true);
-            currentChatIndex++;
+            capuccinaChats[currentCinaIndex].SetActive(true);
+            currentCinaIndex++;
 
             AudioManager.Instance.ChatNotif(); // 🔊 notif sound
 
-            if (currentChatIndex >= capuccinaChats.Count && dateButtonCina != null)
+            if (currentCinaIndex >= capuccinaChats.Count && dateButtonCina != null)
                 dateButtonCina.gameObject.SetActive(true);
         }
     }
 
     void ShowChatMiso()
     {
-        if (currentChatIndex < misoChats.Count)
+        // Prevent running if index is already out of range
+        if (currentMisoIndex >= misoChats.Count)
         {
-            misoChats[currentChatIndex].SetActive(true);
-            currentChatIndex++;
-
-            AudioManager.Instance.ChatNotif(); // 🔊 notif sound
-
-            if (currentChatIndex >= misoChats.Count && dateButtonMiso != null)
-                dateButtonMiso.gameObject.SetActive(true);
+            Debug.Log("[MessagesManager] No more Miso chats to show.");
+            return;
         }
+
+        // Show next chat
+        misoChats[currentMisoIndex].SetActive(true);
+
+        // 🔊 Play SFX here only when we actually activated one
+        AudioManager.Instance.ChatNotif();
+
+        currentMisoIndex++;
+
+        // If we reached the end, show the date button
+        if (currentMisoIndex >= misoChats.Count && dateButtonMiso != null)
+            dateButtonMiso.gameObject.SetActive(true);
     }
+
 
     public void NextChatCapuccina()
     {
-        if (enableNextChatCapucinna && currentChatIndex < capuccinaChats.Count)
+        if (enableNextChatCapucinna && currentCinaIndex < capuccinaChats.Count)
             ShowChatCapucinna();
     }
 
     public void NextChatMiso()
     {
-        if (enableNextChatMiso && currentChatIndex < misoChats.Count)
+        if (enableNextChatMiso && currentMisoIndex < misoChats.Count)
             ShowChatMiso();
     }
 

@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\Shyanne Cay\\Documents\\GitHub\\DatingGame_BadGamJam2025\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A88F4852-ACB1-A6B7-1D00-9D5878398685}|Assembly-CSharp.csproj|C:\\Users\\Shyanne Cay\\Documents\\GitHub\\DatingGame_BadGamJam2025\\assets\\scripts\\messagesmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A88F4852-ACB1-A6B7-1D00-9D5878398685}|Assembly-CSharp.csproj|c:\\users\\shyanne cay\\documents\\github\\datinggame_badgamjam2025\\assets\\scripts\\messagesmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A88F4852-ACB1-A6B7-1D00-9D5878398685}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\messagesmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A88F4852-ACB1-A6B7-1D00-9D5878398685}|Assembly-CSharp.csproj|c:\\users\\shyanne cay\\documents\\github\\datinggame_badgamjam2025\\assets\\scripts\\hovertagmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A88F4852-ACB1-A6B7-1D00-9D5878398685}|Assembly-CSharp.csproj|C:\\Users\\Shyanne Cay\\Documents\\GitHub\\DatingGame_BadGamJam2025\\assets\\scripts\\hovertagmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A88F4852-ACB1-A6B7-1D00-9D5878398685}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\hovertagmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -68,7 +68,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\MessagesManager.cs",
               "ToolTip": "C:\\Users\\Shyanne Cay\\Documents\\GitHub\\DatingGame_BadGamJam2025\\Assets\\Scripts\\MessagesManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\MessagesManager.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAowIkAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAwwIsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-11T20:54:33.923Z",
               "EditorCaption": ""
@@ -83,8 +83,7 @@
               "RelativeToolTip": "Assets\\Scripts\\FadeManager.cs",
               "ViewState": "AgIAAC8AAAAAAAAAAAAuwBAAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T23:15:11.881Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T23:15:11.881Z"
             },
             {
               "$type": "Document",
@@ -96,8 +95,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Intro.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAkwCIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T21:46:28.718Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T21:46:28.718Z"
             },
             {
               "$type": "Document",
@@ -109,8 +107,7 @@
               "RelativeToolTip": "Assets\\Scripts\\SwipeController.cs",
               "ViewState": "AgIAAD0AAAAAAAAAAAAgwEUAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T15:19:33.433Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T15:19:33.433Z"
             },
             {
               "$type": "Document",
@@ -122,8 +119,7 @@
               "RelativeToolTip": "Assets\\Scripts\\ScreenTransitions.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAwA0AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T14:51:10.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T14:51:10.643Z"
             },
             {
               "$type": "Document",
@@ -147,8 +143,7 @@
               "RelativeToolTip": "Assets\\Scripts\\HoverTagManager.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAYwE0AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T16:19:23.218Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T16:19:23.218Z"
             },
             {
               "$type": "Document",
@@ -160,8 +155,7 @@
               "RelativeToolTip": "Assets\\Scripts\\MatchManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T15:06:24.521Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T15:06:24.521Z"
             }
           ]
         }

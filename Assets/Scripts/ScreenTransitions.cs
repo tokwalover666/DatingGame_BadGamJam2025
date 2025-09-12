@@ -9,15 +9,19 @@ public class ScreenTransitions : MonoBehaviour
     [SerializeField] Vector3 visiblePos = new Vector3(0f, 1.61f, -4.85f);
     [SerializeField] float duration = 0.5f;
 
+    public static bool enableCatChat = false;
+
     private Coroutine moveRoutine;
 
     void Start()
     {
+        enableCatChat = false;
         chatScreen.position = hiddenPos;
     }
 
     public void ShowChatButton()
     {
+        
         if (moveRoutine != null) StopCoroutine(moveRoutine);
         moveRoutine = StartCoroutine(MoveTo(chatScreen, visiblePos, duration, true));
     }
@@ -31,6 +35,7 @@ public class ScreenTransitions : MonoBehaviour
 
     private IEnumerator MoveTo(Transform target, Vector3 targetPos, float time, bool showingChat)
     {
+        enableCatChat = true;
         Vector3 start = target.position;
         float t = 0f;
 
