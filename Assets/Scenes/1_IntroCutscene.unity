@@ -263,7 +263,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 678655977}
-  fadeDuration: 1
+  fadeDuration: 5
+  postProcess: {fileID: 351093866}
+  startScale: 10
+  endScale: 1
 --- !u!1 &351093862
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 96026c62c9a38014c9d214e8b20e7862, type: 2}
-  scale: 2
+  scale: 10
 --- !u!1 &678655975
 GameObject:
   m_ObjectHideFlags: 0
