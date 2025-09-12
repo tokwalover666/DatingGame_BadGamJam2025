@@ -1187,7 +1187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3749126913663184784, guid: 20d1adbe32fa50a43ac3a3988c840d02, type: 3}
       propertyPath: m_text
-      value: "PAINITIN PA NATIN ANG PINAS ;3\nfire fighting and ball...\r "
+      value: "PAINITIN PA NATIN ANG PINAS ;3\nfire fighting and ball... #HOTBALLS\r  "
       objectReference: {fileID: 0}
     - target: {fileID: 4442545016872653768, guid: 20d1adbe32fa50a43ac3a3988c840d02, type: 3}
       propertyPath: m_LocalScale.x
@@ -2153,6 +2153,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1440407355}
+  - {fileID: 1061470213}
   - {fileID: 567323510}
   m_Father: {fileID: 239308909}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
@@ -2723,23 +2724,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 553518130013983628, guid: 20d1adbe32fa50a43ac3a3988c840d02, type: 3}
       propertyPath: m_text
-      value: Cina, 25
+      value: Cina ^_^, 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 553518130013983628, guid: 20d1adbe32fa50a43ac3a3988c840d02, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 553518130013983628, guid: 20d1adbe32fa50a43ac3a3988c840d02, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 553518130013983628, guid: 20d1adbe32fa50a43ac3a3988c840d02, type: 3}
       propertyPath: m_fontColor.g
-      value: 0
+      value: 0.09411765
       objectReference: {fileID: 0}
     - target: {fileID: 553518130013983628, guid: 20d1adbe32fa50a43ac3a3988c840d02, type: 3}
       propertyPath: m_fontColor.r
-      value: 0.06666667
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 553518130013983628, guid: 20d1adbe32fa50a43ac3a3988c840d02, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4294901777
+      value: 4294907904
       objectReference: {fileID: 0}
     - target: {fileID: 3749126913663184784, guid: 20d1adbe32fa50a43ac3a3988c840d02, type: 3}
       propertyPath: m_text
-      value: "coffe time?? m-maybe kissy time?? \njk\u2026 unless??"
+      value: "coffe time?? m-maybe kissy time?? \njk... unless?? UwU"
       objectReference: {fileID: 0}
     - target: {fileID: 4442545016872653768, guid: 20d1adbe32fa50a43ac3a3988c840d02, type: 3}
       propertyPath: m_LocalScale.x
@@ -4344,6 +4353,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 6cb994c304b12f94385742bedf37bebf, type: 3}
+    - target: {fileID: 3749126913663184784, guid: 20d1adbe32fa50a43ac3a3988c840d02, type: 3}
+      propertyPath: m_text
+      value: ako'y tahimik lang sa umpisa... :)
+      objectReference: {fileID: 0}
     - target: {fileID: 4391639881334628017, guid: 20d1adbe32fa50a43ac3a3988c840d02, type: 3}
       propertyPath: m_SizeDelta.x
       value: 121
@@ -4501,7 +4514,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -188, y: 25}
+  m_AnchoredPosition: {x: -280, y: 25}
   m_SizeDelta: {x: 82.84, y: 39.43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &567323511
@@ -7007,14 +7020,14 @@ RectTransform:
   m_GameObject: {fileID: 763329420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.47851, y: 0.47851, z: 0.47851}
+  m_LocalScale: {x: 0.503871, y: 0.4534839, z: 0.503871}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2078775637}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12, y: 279}
+  m_AnchoredPosition: {x: -18.2, y: 279}
   m_SizeDelta: {x: 422, y: 255}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &763329422
@@ -7066,7 +7079,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3749126913663184784, guid: 20d1adbe32fa50a43ac3a3988c840d02, type: 3}
       propertyPath: m_text
-      value: nerd girls chat nyo ako plsplspls
+      value: 'baller girls chat nyo ako plsplspls
+
+        #Loyal #Scared #Baller'
       objectReference: {fileID: 0}
     - target: {fileID: 4442545016872653768, guid: 20d1adbe32fa50a43ac3a3988c840d02, type: 3}
       propertyPath: m_LocalScale.x
@@ -7102,7 +7117,7 @@ PrefabInstance:
       objectReference: {fileID: 520332626}
     - target: {fileID: 6155805970832763882, guid: 20d1adbe32fa50a43ac3a3988c840d02, type: 3}
       propertyPath: m_text
-      value: '#Loyal #Scared #Baller'
+      value: iyaken minsan
       objectReference: {fileID: 0}
     - target: {fileID: 7260463088962571036, guid: 20d1adbe32fa50a43ac3a3988c840d02, type: 3}
       propertyPath: m_Sprite
@@ -8510,6 +8525,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1046299527}
+  m_CullTransparentMesh: 1
+--- !u!1 &1061470212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1061470213}
+  - component: {fileID: 1061470215}
+  - component: {fileID: 1061470214}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1061470213
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061470212}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.8665809, y: 0.8665809, z: 0.8665809}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 237712566}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 99, y: 9}
+  m_SizeDelta: {x: 479, y: 320}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1061470214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061470212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 66751985ad1788b46b01bf6e70892c3f, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1061470215
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061470212}
   m_CullTransparentMesh: 1
 --- !u!1 &1061528739
 GameObject:
@@ -10112,7 +10202,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3749126913663184784, guid: 20d1adbe32fa50a43ac3a3988c840d02, type: 3}
       propertyPath: m_text
-      value: "tara bomba? \nVOTE FOR ME NEXT TERM!!"
+      value: 'VOTE FOR ME NEXT TERM!!
+
+        tara bomba?'
       objectReference: {fileID: 0}
     - target: {fileID: 4391639881334628017, guid: 20d1adbe32fa50a43ac3a3988c840d02, type: 3}
       propertyPath: m_SizeDelta.x
@@ -11257,7 +11349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1363472146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11964,7 +12056,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 553518130013983628, guid: 20d1adbe32fa50a43ac3a3988c840d02, type: 3}
       propertyPath: m_text
-      value: divorced child
+      value: Di Ako Sadboi
       objectReference: {fileID: 0}
     - target: {fileID: 2273341642113162107, guid: 20d1adbe32fa50a43ac3a3988c840d02, type: 3}
       propertyPath: m_Sprite
@@ -14859,7 +14951,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1860927256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15077,9 +15169,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3749126913663184784, guid: 20d1adbe32fa50a43ac3a3988c840d02, type: 3}
       propertyPath: m_text
-      value: 'women choose me over men
+      value: 'know why women choose me over men
 
-        BE MY POOKIEBEAR???'
+        BE MY POOKIEBEAR NOW'
       objectReference: {fileID: 0}
     - target: {fileID: 3900027222105467539, guid: 20d1adbe32fa50a43ac3a3988c840d02, type: 3}
       propertyPath: m_IsActive
