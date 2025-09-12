@@ -6,15 +6,19 @@ using System.Collections;
 public class FadeManager : MonoBehaviour
 {
     public static FadeManager Instance;
-    public RawImage fadeImage;
-    public float fadeDuration = 1f;
+    [SerializeField] RawImage fadeImage;
+    [SerializeField] float fadeDuration = 1f;
+
+    [Header("Pixelation")]
+    [SerializeField] PostProcess postProcess;
+    [SerializeField] int startScale = 10;
+    [SerializeField] int endScale = 1;
 
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            //DontDestroyOnLoad(gameObject); 
         }
         else
         {
@@ -54,8 +58,17 @@ public class FadeManager : MonoBehaviour
         while (t < fadeDuration)
         {
             t += Time.deltaTime;
-            c.a = Mathf.Lerp(0f, 1f, t / fadeDuration);
+
+            float normalized = t / fadeDuration;
+
+            // Fade alpha
+            c.a = Mathf.Lerp(0f, 1f, normalized);
             fadeImage.color = c;
+
+            // Pixelation scale
+            if (postProcess != null)
+                postProcess.scale = Mathf.RoundToInt(Mathf.Lerp(endScale, startScale, normalized));
+
             yield return null;
         }
     }
@@ -67,8 +80,17 @@ public class FadeManager : MonoBehaviour
         while (t < fadeDuration)
         {
             t += Time.deltaTime;
-            c.a = Mathf.Lerp(1f, 0f, t / fadeDuration);
+
+            float normalized = t / fadeDuration;
+
+            // Fade alpha
+            c.a = Mathf.Lerp(1f, 0f, normalized);
             fadeImage.color = c;
+
+            // Pixelation scale
+            if (postProcess != null)
+                postProcess.scale = Mathf.RoundToInt(Mathf.Lerp(startScale, endScale, normalized));
+
             yield return null;
         }
     }
