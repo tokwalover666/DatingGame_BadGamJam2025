@@ -33,11 +33,19 @@ public class MessagesManager : MonoBehaviour
 
         foreach (var chat in misoChats)
             chat.SetActive(false);
-         
-        if (dateButtonCina != null) dateButtonCina.gameObject.SetActive(false);
-         
-        if (dateButtonCina != null) dateButtonCina.onClick.AddListener(ShowFinalImage);
-         
+
+        if (dateButtonCina != null)
+        {
+            dateButtonCina.gameObject.SetActive(false);
+            dateButtonCina.onClick.AddListener(ShowFinalImageCina);
+        }
+
+        if (dateButtonMiso != null)
+        {
+            dateButtonMiso.gameObject.SetActive(false);
+            dateButtonMiso.onClick.AddListener(ShowFinalImageMiso);
+        }
+
         AudioManager.Instance.PlayBGM("ChatBGM");
     }
 
@@ -47,7 +55,6 @@ public class MessagesManager : MonoBehaviour
         chatHeadTMP.text = "hello hot stuff";
         enableNextChatCapucinna = true;
 
-        // Hide choice buttons immediately
         if (choiceButton1 != null) choiceButton1.gameObject.SetActive(false);
         if (choiceButton2 != null) choiceButton2.gameObject.SetActive(false);
 
@@ -68,7 +75,7 @@ public class MessagesManager : MonoBehaviour
 
     public void ClickMisoScreen()
     {
-
+        // placeholder for direct click logic if needed
     }
 
     void Update()
@@ -84,13 +91,10 @@ public class MessagesManager : MonoBehaviour
 
         if (MatchManager.isMisoMatched == true && ScreenTransitions.enableCatChat == true && Input.GetMouseButtonDown(0))
         {
-
             enableNextChatMiso = true;
             Debug.Log("miso");
-
             NextChatMiso();
         }
-            
     }
 
     void ShowChatCapucinna()
@@ -100,7 +104,7 @@ public class MessagesManager : MonoBehaviour
             capuccinaChats[currentCinaIndex].SetActive(true);
             currentCinaIndex++;
 
-            AudioManager.Instance.ChatNotif(); // 🔊 notif sound
+            AudioManager.Instance.ChatNotif();
 
             if (currentCinaIndex >= capuccinaChats.Count && dateButtonCina != null)
                 dateButtonCina.gameObject.SetActive(true);
@@ -109,26 +113,19 @@ public class MessagesManager : MonoBehaviour
 
     void ShowChatMiso()
     {
-        // Prevent running if index is already out of range
         if (currentMisoIndex >= misoChats.Count)
         {
             Debug.Log("[MessagesManager] No more Miso chats to show.");
             return;
         }
 
-        // Show next chat
         misoChats[currentMisoIndex].SetActive(true);
-
-        // 🔊 Play SFX here only when we actually activated one
         AudioManager.Instance.ChatNotif();
-
         currentMisoIndex++;
 
-        // If we reached the end, show the date button
         if (currentMisoIndex >= misoChats.Count && dateButtonMiso != null)
             dateButtonMiso.gameObject.SetActive(true);
     }
-
 
     public void NextChatCapuccina()
     {
@@ -142,22 +139,33 @@ public class MessagesManager : MonoBehaviour
             ShowChatMiso();
     }
 
-    void ShowFinalImage()
+    void ShowFinalImageCina()
     {
-        // Hide all chats
         foreach (var chat in capuccinaChats)
             chat.SetActive(false);
 
-        // Hide final button
         if (dateButtonCina != null) dateButtonCina.gameObject.SetActive(false);
 
-        // 🎵 Switch music to romance
         AudioManager.Instance.StopBGM();
-        AudioManager.Instance.PlayBGM("Romance");  // <-- fixed
+        AudioManager.Instance.PlayBGM("Romance");
 
         if (chatHeadTMP != null) chatHeadTMP.text = "";
 
-        SceneManager.LoadScene("3_EndingCutscene");
+        SceneManager.LoadScene("3_CinaEnding");
     }
 
+    void ShowFinalImageMiso()
+    {
+        foreach (var chat in misoChats)
+            chat.SetActive(false);
+
+        if (dateButtonMiso != null) dateButtonMiso.gameObject.SetActive(false);
+
+        AudioManager.Instance.StopBGM();
+        AudioManager.Instance.PlayBGM("Romance");
+
+        if (chatHeadTMP != null) chatHeadTMP.text = "";
+
+        SceneManager.LoadScene("4_MisoEnding");
+    }
 }

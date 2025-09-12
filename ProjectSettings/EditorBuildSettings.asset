@@ -18,8 +18,11 @@ EditorBuildSettings:
     path: Assets/Scenes/2_Gameplay.unity
     guid: d23bb38f37010a34abed9124c3b9d212
   - enabled: 1
-    path: Assets/Scenes/3_EndingCutscene.unity
+    path: Assets/Scenes/3_CinaEnding.unity
     guid: 03892c287c54ae84caf2a91190464aa8
+  - enabled: 1
+    path: Assets/Scenes/4_MisoEnding.unity
+    guid: 2c7674967454169478790e424e20c26c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
