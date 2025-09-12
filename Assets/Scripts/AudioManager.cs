@@ -5,8 +5,10 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance;
     public AudioClip[] audios;
 
-    private AudioSource sfxSource; // for sound effects
-    private AudioSource bgmSource; // for background music
+    private AudioSource sfxSource;
+    private AudioSource bgmSource;
+
+    private string currentBGMName = ""; // 👈 remember last BGM
 
     private void Awake()
     {
@@ -21,15 +23,17 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        // Add two separate AudioSources
         sfxSource = gameObject.AddComponent<AudioSource>();
         bgmSource = gameObject.AddComponent<AudioSource>();
 
-        bgmSource.loop = true; // bgm should loop
-        sfxSource.loop = false; // sfx should not loop
+        bgmSource.loop = true;
+        sfxSource.loop = false;
+
+        bgmSource.volume = 1f;
+        sfxSource.volume = 1f;
     }
 
-    // 🔊 SFX methods
+    // 🔊 SFX
     public void PlaySwipeLeftSound() => PlaySFX("LeftSwipe");
     public void PlaySwipeRightSound() => PlaySFX("RightSwipe");
     public void ChatNotif() => PlaySFX("Chat_Notif");
@@ -43,12 +47,15 @@ public class AudioManager : MonoBehaviour
         sfxSource.PlayOneShot(clip);
     }
 
-    // 🎵 BGM methods
+    // 🎵 BGM
     public void PlayBGM(string audioName)
     {
         AudioClip clip = FindAudioByName(audioName);
         if (clip == null) return;
 
+        if (bgmSource.clip == clip && bgmSource.isPlaying) return; // already playing
+
+        currentBGMName = audioName; // remember which track
         bgmSource.clip = clip;
         bgmSource.Play();
     }
@@ -57,11 +64,26 @@ public class AudioManager : MonoBehaviour
     {
         bgmSource.Stop();
     }
+
     public void StopSFX()
     {
         if (sfxSource != null)
             sfxSource.Stop();
     }
+
+    // 🎚 Volume control
+    public void SetSFXVolume(float value)
+    {
+        if (sfxSource != null)
+            sfxSource.volume = value;
+    }
+
+    public void SetBGMVolume(float value)
+    {
+        if (bgmSource != null)
+            bgmSource.volume = value;
+    }
+
 
     // Helpers
     private AudioClip FindAudioByName(string audioName)

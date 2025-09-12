@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
 
 public class SwipeController : MonoBehaviour
@@ -18,6 +18,9 @@ public class SwipeController : MonoBehaviour
 
     [Header("Fade Settings")]
     [SerializeField] float fadeSpeed = 5f;
+
+    [Header("UI Panels")]
+    [SerializeField] GameObject settingsPanel; // 👈 assign in Inspector
 
     SpriteRenderer idleRenderer;
     float idleTargetAlpha = 1f;
@@ -40,14 +43,13 @@ public class SwipeController : MonoBehaviour
             }
         }
 
-        // Cache sprite renderer for idleAnim
         if (idleAnim != null)
         {
             idleRenderer = idleAnim.GetComponent<SpriteRenderer>();
             if (idleRenderer != null)
             {
                 Color c = idleRenderer.color;
-                c.a = 1f; // start visible
+                c.a = 1f;
                 idleRenderer.color = c;
             }
         }
@@ -57,6 +59,10 @@ public class SwipeController : MonoBehaviour
 
     void Update()
     {
+        // 👇 Block swipe input if settings panel is active
+        if (settingsPanel != null && settingsPanel.activeSelf)
+            return;
+
         if (CurrentCard == null) return;
         CurrentCard.HandleInput();
 
@@ -75,15 +81,14 @@ public class SwipeController : MonoBehaviour
                 SetIdleAnim();
             }
 
-            FadeIdle(0f); // hide idle while dragging
+            FadeIdle(0f);
         }
         else if (!Input.GetMouseButton(0) && !CurrentCard.HasFlownOff)
         {
             SetIdleAnim();
-            FadeIdle(1f); // show idle again when released
+            FadeIdle(1f);
         }
 
-        // Smooth fade update
         if (idleRenderer != null)
         {
             idleCurrentAlpha = Mathf.Lerp(idleCurrentAlpha, idleTargetAlpha, Time.deltaTime * fadeSpeed);
