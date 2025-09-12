@@ -87,6 +87,11 @@ public class HoverTagManager : MonoBehaviour
         { "WhiteProfile", "Talk" },
         { "White2Profile", "Dirty" },
         { "YasminProfile", "Sarap" },
+        { "JomaProfile", "Huuii" },
+        { "SobaProfile", "Talk" },
+        { "MaiProfile", "Dirty" },
+        { "SheynProfile", "Sarap" },
+        { "OmiProfile", "Huuii" },
 
     };
 
