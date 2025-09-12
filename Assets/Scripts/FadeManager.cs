@@ -28,6 +28,8 @@ public class FadeManager : MonoBehaviour
 
     void Start()
     {
+        Screen.SetResolution(1024, 768, true);
+
         if (fadeImage == null)
         {
             Debug.LogError("[FadeManager] FadeImage is not assigned!");
