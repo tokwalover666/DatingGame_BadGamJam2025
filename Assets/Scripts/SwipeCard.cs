@@ -13,7 +13,6 @@ public class SwipeCard : MonoBehaviour
     [SerializeField] float offscreenDistance = 1000f;
     [SerializeField] float flyOutDuration = 1f;
 
-
     Vector3 startPos;
     Quaternion startRot;
     Vector3 lastPos;
@@ -29,11 +28,9 @@ public class SwipeCard : MonoBehaviour
 
     void Start()
     {
-
-
-        startPos = transform.position;
-        startRot = transform.rotation;
-        lastPos = transform.position;
+        startPos = transform.localPosition;
+        startRot = transform.localRotation;
+        lastPos = transform.localPosition;
     }
 
     public void HandleInput()
@@ -42,9 +39,11 @@ public class SwipeCard : MonoBehaviour
         {
             dragging = true;
             dragStart = Input.mousePosition;
-            lastPos = transform.position;
+            lastPos = transform.localPosition;
             velocity = Vector3.zero;
             hasMoved = false;
+             
+            transform.SetAsLastSibling();
         }
 
         if (dragging && Input.GetMouseButton(0))
@@ -55,12 +54,14 @@ public class SwipeCard : MonoBehaviour
             if (hasMoved)
             {
                 float moveX = (Input.mousePosition.x / Screen.width - 0.5f) * maxHorizontalMove;
+                 
+                float currentZ = transform.localPosition.z;
 
-                Vector3 targetPos = new Vector3(startPos.x + moveX, startPos.y, startPos.z);
-                transform.position = Vector3.Lerp(transform.position, targetPos, 0.3f);
+                Vector3 targetPos = new Vector3(startPos.x + moveX, startPos.y, currentZ);
+                transform.localPosition = Vector3.Lerp(transform.localPosition, targetPos, 0.3f);
 
                 float rot = Mathf.Clamp(moveX * rotationFactor, -maxTiltDegrees, maxTiltDegrees);
-                transform.rotation = Quaternion.Euler(0f, 0f, rot);
+                transform.localRotation = Quaternion.Euler(0f, 0f, rot);
 
                 dragDelta = new Vector3(moveX, 0f, 0f);
             }
@@ -76,7 +77,6 @@ public class SwipeCard : MonoBehaviour
 
                 if (far || fast)
                 {
-                    // Play swipe sound depending on direction
                     if (dragDelta.x > 0)
                         AudioManager.Instance.PlaySwipeRightSound();
                     else
@@ -97,42 +97,40 @@ public class SwipeCard : MonoBehaviour
     IEnumerator SnapBack()
     {
         float t = 0f;
-        Vector3 fromPos = transform.position;
-        Quaternion fromRot = transform.rotation;
+        Vector3 fromPos = transform.localPosition;
+        Quaternion fromRot = transform.localRotation;
+
         while (t < 1f)
         {
             t += Time.deltaTime * returnSpeed;
-            transform.position = Vector3.Lerp(fromPos, startPos, t);
-            transform.rotation = Quaternion.Slerp(fromRot, startRot, t);
+            transform.localPosition = Vector3.Lerp(fromPos, startPos, t);
+            transform.localRotation = Quaternion.Slerp(fromRot, startRot, t);
             yield return null;
         }
-        transform.position = startPos;
-        transform.rotation = startRot;
+
+        transform.localPosition = startPos;
+        transform.localRotation = startRot;
     }
 
     IEnumerator FlyOff(Vector3 dir)
     {
         HasFlownOff = true;
-        Vector3 fromPos = transform.position;
-        Quaternion releaseRot = transform.rotation;
+        Vector3 fromPos = transform.localPosition;
+        Quaternion releaseRot = transform.localRotation;
         Vector3 toPos = fromPos + dir * offscreenDistance;
 
         float t = 0f;
 
-
         while (t < 0.6f)
         {
-
             t += Time.deltaTime / Mathf.Max(flyOutDuration, 0.0001f);
-            transform.position = Vector3.Lerp(fromPos, toPos, t);
-            transform.rotation = releaseRot;
+            transform.localPosition = Vector3.Lerp(fromPos, toPos, t);
+            transform.localRotation = releaseRot;
             yield return null;
         }
 
         if (dir == Vector3.right)
         {
-
-
             MatchManager mm = FindFirstObjectByType<MatchManager>();
             if (mm != null) mm.CheckMatch(gameObject.name);
         }
@@ -140,7 +138,4 @@ public class SwipeCard : MonoBehaviour
         OnDestroyed?.Invoke(this);
         Destroy(gameObject);
     }
-
-
-
 }
