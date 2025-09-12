@@ -7,86 +7,131 @@ using UnityEngine.SceneManagement;
 public class MessagesManager : MonoBehaviour
 {
     [SerializeField] List<GameObject> capuccinaChats = new List<GameObject>();
+    [SerializeField] List<GameObject> misoChats = new List<GameObject>();
     [SerializeField] TextMeshProUGUI chatHeadTMP;
 
     [Header("Choices")]
     [SerializeField] Button choiceButton1;
     [SerializeField] Button choiceButton2;
 
+
     [Header("Final Step")]
-    [SerializeField] Button finalButton;
+    [SerializeField] Button dateButtonCina;
+    [SerializeField] Button dateButtonMiso;
     [SerializeField] GameObject finalImage;
 
     private int currentChatIndex = 0;
-    private bool enableNextChat = false;
+    private bool enableNextChatCapucinna = false;
+    private bool enableNextChatMiso = false;
 
     void Start()
     {
-        // Hide all chats at start
+
         foreach (var chat in capuccinaChats)
         {
             chat.SetActive(false);
         }
 
+        foreach (var chat in misoChats)
+        {
+            chat.SetActive(false);
+        }
+
         // Hide final UI elements
-        if (finalButton != null) finalButton.gameObject.SetActive(false);
+        if (dateButtonCina != null) dateButtonCina.gameObject.SetActive(false);
         if (finalImage != null) finalImage.SetActive(false);
 
         // Add listeners
-        if (finalButton != null) finalButton.onClick.AddListener(ShowFinalImage);
+        if (dateButtonCina != null) dateButtonCina.onClick.AddListener(ShowFinalImage);
     }
 
     public void ClickChoice1()
     {
         chatHeadTMP.text = "hello hot stuff";
-        enableNextChat = true;
+        enableNextChatCapucinna = true;
 
         // Hide choice buttons immediately
         if (choiceButton1 != null) choiceButton1.gameObject.SetActive(false);
         if (choiceButton2 != null) choiceButton2.gameObject.SetActive(false);
 
-        ShowChat();
+        ShowChatCapucinna();
     }
 
     public void ClickChoice2()
     {
         chatHeadTMP.text = "hey…";
-        enableNextChat = true;
+        enableNextChatCapucinna = true;
 
         // Hide choice buttons immediately
         if (choiceButton1 != null) choiceButton1.gameObject.SetActive(false);
         if (choiceButton2 != null) choiceButton2.gameObject.SetActive(false);
 
-        ShowChat();
+        ShowChatCapucinna();
+    }
+
+    public void ClickMisoScreen()
+    {
+        enableNextChatMiso = true;
+        Debug.Log("miso");
+
+        ShowChatMiso();
+
     }
 
     void Update()
     {
-        if (enableNextChat && Input.GetMouseButtonDown(0))
+        if (enableNextChatCapucinna && Input.GetMouseButtonDown(0))
         {
             NextChatCapuccina();
         }
+
+        if (enableNextChatMiso && Input.GetMouseButtonDown(0))
+        {
+            NextChatMiso();
+        }
     }
 
-    void ShowChat()
+    void ShowChatCapucinna()
     {
         if (currentChatIndex < capuccinaChats.Count)
         {
             capuccinaChats[currentChatIndex].SetActive(true);
             currentChatIndex++;
 
-            if (currentChatIndex >= capuccinaChats.Count && finalButton != null)
+            if (currentChatIndex >= capuccinaChats.Count && dateButtonCina != null)
             {
-                finalButton.gameObject.SetActive(true);
+                dateButtonCina.gameObject.SetActive(true);
+            }
+        }
+    }
+
+    void ShowChatMiso()
+    {
+        if (currentChatIndex < misoChats.Count)
+        {
+            misoChats[currentChatIndex].SetActive(true);
+            currentChatIndex++;
+
+            if (currentChatIndex >= misoChats.Count && dateButtonMiso != null)
+            {
+                dateButtonMiso.gameObject.SetActive(true);
             }
         }
     }
 
     public void NextChatCapuccina()
     {
-        if (enableNextChat && currentChatIndex < capuccinaChats.Count)
+        if (enableNextChatCapucinna && currentChatIndex < capuccinaChats.Count)
         {
-            ShowChat();
+            ShowChatCapucinna();
+        }
+    }
+
+    public void NextChatMiso()
+    {
+        if (enableNextChatMiso && currentChatIndex < misoChats.Count)
+        {
+            ShowChatMiso();
         }
     }
 
@@ -99,7 +144,7 @@ public class MessagesManager : MonoBehaviour
         }
 
         // Hide final button
-        if (finalButton != null) finalButton.gameObject.SetActive(false);
+        if (dateButtonCina != null) dateButtonCina.gameObject.SetActive(false);
 
         // Show final image
         if (finalImage != null) finalImage.SetActive(true);
