@@ -47,6 +47,12 @@ public class MatchManager : MonoBehaviour
             Debug.Log("[MatchManager] Special match! isMisoMatched = true");
         }
 
+        if (cardName == "PREF_Card (4) match")
+        {
+            isMisoMatched = false;
+            Debug.Log("[MatchManager] Special match! isMisoMatched = true");
+        }
+
         matchPopup.SetActive(true);
         cardStack.SetActive(false);
         hand.SetActive(false);

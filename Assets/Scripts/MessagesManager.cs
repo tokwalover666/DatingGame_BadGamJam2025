@@ -33,14 +33,11 @@ public class MessagesManager : MonoBehaviour
 
         foreach (var chat in misoChats)
             chat.SetActive(false);
-
-        // Hide final UI elements
+         
         if (dateButtonCina != null) dateButtonCina.gameObject.SetActive(false);
-
-        // Add listeners
+         
         if (dateButtonCina != null) dateButtonCina.onClick.AddListener(ShowFinalImage);
-
-        // 🎵 Start background music for chats
+         
         AudioManager.Instance.PlayBGM("ChatBGM");
     }
 
@@ -85,7 +82,7 @@ public class MessagesManager : MonoBehaviour
             misoMessages.SetActive(true);
         }
 
-        if (ScreenTransitions.enableCatChat == true && Input.GetMouseButtonDown(0))
+        if (MatchManager.isMisoMatched == true && ScreenTransitions.enableCatChat == true && Input.GetMouseButtonDown(0))
         {
 
             enableNextChatMiso = true;
