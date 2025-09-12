@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 using System.Collections;
 
@@ -8,23 +8,31 @@ public class MatchManager : MonoBehaviour
     [SerializeField] GameObject cardStack;
 
     [Header("Popup UI")]
-    [SerializeField] GameObject matchPopup;
+    [SerializeField] GameObject matchPopupMiso;  // 🍜 Miso popup
+    [SerializeField] GameObject matchPopupCina;  // 🐱 Cina popup
     [SerializeField] float popupAnimDuration = 0.3f;
 
     [Header("Dictionary for Matchable meems")]
     [SerializeField] string[] matchNames;
-     
-    public static bool isMisoMatched = false; 
 
-    RectTransform popupRect;
+    [Header("Audio")]
+    [SerializeField] string misoPopupSFX = "MisoMatchSFX";
+    [SerializeField] string cinaPopupSFX = "CinaMatchSFX";
+
+    public static bool isMisoMatched = false;
+    public static bool isCinaMatched = false;
+
+    RectTransform activePopupRect;
     Vector3 hiddenScale = new Vector3(0.01f, 0.01f, 0.01f);
     Vector3 shownScale = Vector3.one;
 
     void Awake()
     {
         isMisoMatched = false;
-        popupRect = matchPopup.GetComponent<RectTransform>();
-        matchPopup.SetActive(false);
+        isCinaMatched = false;
+
+        if (matchPopupMiso != null) matchPopupMiso.SetActive(false);
+        if (matchPopupCina != null) matchPopupCina.SetActive(false);
     }
 
     public void CheckMatch(string cardName)
@@ -40,22 +48,38 @@ public class MatchManager : MonoBehaviour
     }
 
     void ShowPopup(string cardName)
-    { 
+    {
+        // 🍜 Miso match
         if (cardName == "PREF_Card (26) match")
         {
             isMisoMatched = true;
-            Debug.Log("[MatchManager] Special match! isMisoMatched = true");
+            Debug.Log("[MatchManager] Miso matched!");
+            ShowCharacterPopup(matchPopupMiso, misoPopupSFX);
         }
-
-        if (cardName == "PREF_Card (4) match")
+        // 🐱 Cina match
+        else if (cardName == "PREF_Card (4) match")
         {
-            isMisoMatched = false;
-            Debug.Log("[MatchManager] Special match! isMisoMatched = true");
+            isCinaMatched = true;
+            Debug.Log("[MatchManager] Cina matched!");
+            ShowCharacterPopup(matchPopupCina, cinaPopupSFX);
         }
+    }
 
-        matchPopup.SetActive(true);
+    void ShowCharacterPopup(GameObject popup, string sfxName)
+    {
+        // stop current bgm
+        AudioManager.Instance.StopBGM();
+
+        // play unique popup sfx
+        if (!string.IsNullOrEmpty(sfxName))
+            AudioManager.Instance.PlaySFX(sfxName);
+
+        // enable popup
+        popup.SetActive(true);
         cardStack.SetActive(false);
         hand.SetActive(false);
+
+        activePopupRect = popup.GetComponent<RectTransform>();
 
         StopAllCoroutines();
         StartCoroutine(AnimatePopup());
@@ -63,13 +87,13 @@ public class MatchManager : MonoBehaviour
 
     IEnumerator AnimatePopup()
     {
-        popupRect.localScale = hiddenScale;
+        activePopupRect.localScale = hiddenScale;
         float t = 0f;
 
         while (t < 1f)
         {
             t += Time.deltaTime / popupAnimDuration;
-            popupRect.localScale = Vector3.Lerp(hiddenScale, shownScale, t);
+            activePopupRect.localScale = Vector3.Lerp(hiddenScale, shownScale, t);
             yield return null;
         }
     }

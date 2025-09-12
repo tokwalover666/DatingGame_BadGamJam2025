@@ -24,9 +24,11 @@ public class MessagesManager : MonoBehaviour
     private int currentMisoIndex = 0;
     private bool enableNextChatCapucinna = false;
     private bool enableNextChatMiso = false;
+    private bool hasStoppedBGM = false;
 
     void Start()
     {
+        AudioManager.Instance.PlayBGM("SOUND 1");
         misoMessages.SetActive(false);
         foreach (var chat in capuccinaChats)
             chat.SetActive(false);
@@ -101,6 +103,15 @@ public class MessagesManager : MonoBehaviour
     {
         if (currentCinaIndex < capuccinaChats.Count)
         {
+            // ✅ stop popup SFX the first time messages appear
+            AudioManager.Instance.StopSFX();
+
+            if (!hasStoppedBGM)
+            {
+                AudioManager.Instance.StopBGM();
+                hasStoppedBGM = true;
+            }
+
             capuccinaChats[currentCinaIndex].SetActive(true);
             currentCinaIndex++;
 
@@ -119,6 +130,15 @@ public class MessagesManager : MonoBehaviour
             return;
         }
 
+        // ✅ stop popup SFX the first time messages appear
+        AudioManager.Instance.StopSFX();
+
+        if (!hasStoppedBGM)
+        {
+            AudioManager.Instance.StopBGM();
+            hasStoppedBGM = true;
+        }
+
         misoChats[currentMisoIndex].SetActive(true);
         AudioManager.Instance.ChatNotif();
         currentMisoIndex++;
@@ -126,6 +146,7 @@ public class MessagesManager : MonoBehaviour
         if (currentMisoIndex >= misoChats.Count && dateButtonMiso != null)
             dateButtonMiso.gameObject.SetActive(true);
     }
+
 
     public void NextChatCapuccina()
     {

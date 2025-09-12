@@ -6,16 +6,19 @@ using System.Collections;
 public class Dialogue : MonoBehaviour
 {
     [Header("UI References")]
-    [SerializeField] private Image dialogueImage;     
-    [SerializeField] private TextMeshProUGUI dialogueText; 
+    [SerializeField] private Image dialogueImage;
+    [SerializeField] private TextMeshProUGUI dialogueText;
 
     [Header("Dialogue Content")]
-    [SerializeField] private Sprite[] dialogueImages; 
+    [SerializeField] private Sprite[] dialogueImages;
     [TextArea(2, 5)]
-    [SerializeField] private string[] dialogueLines;  
+    [SerializeField] private string[] dialogueLines;
 
     [Header("Settings")]
-    [SerializeField] private float typeSpeed = 0.03f; 
+    [SerializeField] private float typeSpeed = 0.03f;
+
+    [Header("Audio")]
+    [SerializeField] private string specialSFX = "booo"; // 🎵 sound for line 15
 
     private int currentIndex = 0;
     private bool isTyping = false;
@@ -34,7 +37,7 @@ public class Dialogue : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) 
+        if (Input.GetMouseButtonDown(0))
         {
             if (isTyping)
             {
@@ -53,8 +56,15 @@ public class Dialogue : MonoBehaviour
     {
         if (index >= dialogueLines.Length) return;
 
+        // swap sprite
         if (dialogueImage != null && dialogueImages[index] != null)
             dialogueImage.sprite = dialogueImages[index];
+
+        // ✅ check for line 15 (index 14)
+        if (index == 14 && !string.IsNullOrEmpty(specialSFX))
+        {
+            AudioManager.Instance.PlaySFX(specialSFX);
+        }
 
         if (typingCoroutine != null) StopCoroutine(typingCoroutine);
         typingCoroutine = StartCoroutine(TypeText(dialogueLines[index]));

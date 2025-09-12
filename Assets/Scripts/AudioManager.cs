@@ -35,7 +35,7 @@ public class AudioManager : MonoBehaviour
     public void ChatNotif() => PlaySFX("Chat_Notif");
     public void ClickSound() => PlaySFX("Click");
 
-    private void PlaySFX(string audioName)
+    public void PlaySFX(string audioName)
     {
         AudioClip clip = FindAudioByName(audioName);
         if (clip == null) return;
@@ -56,6 +56,11 @@ public class AudioManager : MonoBehaviour
     public void StopBGM()
     {
         bgmSource.Stop();
+    }
+    public void StopSFX()
+    {
+        if (sfxSource != null)
+            sfxSource.Stop();
     }
 
     // Helpers

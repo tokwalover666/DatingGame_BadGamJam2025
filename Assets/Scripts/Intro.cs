@@ -10,7 +10,7 @@ public class Intro : MonoBehaviour
 
     void Start()
     {
-
+        AudioManager.Instance.PlayBGM("balay");
         displayImage.sprite = images[currentIndex];
     }
 
